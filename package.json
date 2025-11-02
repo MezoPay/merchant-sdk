@@ -1,0 +1,50 @@
+{
+  "name": "mezopay-merchant-sdk",
+  "version": "1.0.0",
+  "description": "Official MezoPay Merchant SDK for accepting MUSD payments on your website",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun run tsup",
+    "dev": "bun run tsup --watch",
+    "prepublishOnly": "bun run build",
+    "type-check": "bunx tsc --noEmit"
+  },
+  "keywords": [
+    "mezopay",
+    "musd",
+    "bitcoin",
+    "payment",
+    "crypto",
+    "merchant",
+    "sdk"
+  ],
+  "author": "MezoPay",
+  "license": "MIT",
+  "dependencies": {
+    "viem": "^2.x",
+    "wagmi": "^2.19.0",
+    "@rainbow-me/rainbowkit": "^2.2.9",
+    "@tanstack/react-query": "^5.90.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
